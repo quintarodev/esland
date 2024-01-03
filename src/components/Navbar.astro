@@ -1,0 +1,11 @@
+---
+import NavbarItem from "./NavbarItem.astro"
+const LINKS = [
+  { href: "/info", label: "Info" },
+  { href: "/archivo", label: "Archivo" },
+]
+---
+
+<ul class="grow flex items-center justify-start gap-8">
+  {LINKS.map((link) => <NavbarItem href={link.href} label={link.label} />)}
+</ul>

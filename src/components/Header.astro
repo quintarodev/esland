@@ -1,0 +1,36 @@
+---
+import Navbar from "./Navbar.astro"
+import Wrapper from "./Wrapper.astro"
+---
+
+<header id="header" class="fixed z-50 top-0 w-full backdrop:blur-0">
+  <Wrapper classname="flex items-center py-4 justify-between gap-8">
+    <a href="/">
+      <img src="/esland-logo.png" alt="Logo esland" />
+      <Navbar />
+      <a
+        href="/documental"
+        class="text-white text-xl rounded-full py-3 px-6 border border-white font-semibold tracking-[2.5px] uppercase"
+      >
+        Esland el Documental</a
+      >
+    </a>
+  </Wrapper>
+</header>
+
+<style>
+  .blured {
+    backdrop-filter: blur(10px);
+  }
+</style>
+<script>
+  const header = document.getElementById("header")
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      header?.classList.add("blured")
+      console.log("ok")
+    } else {
+      header?.classList.remove("blured")
+    }
+  })
+</script>

@@ -1,0 +1,20 @@
+---
+interface Props {
+  href: string
+  label: string
+}
+const { href, label } = Astro.props
+---
+
+<a
+  href={href}
+  class="uppercase hover:shadow-[0_0_10px_#00ff00,
+  0_0_20px_#00ff00,
+  0_0_30px_#00ff00] text-white font-semibold text-lg tracking-[2.5px]"
+  >{label}</a
+>
+<style>
+  .neon {
+    box-shadow:;
+  }
+</style>

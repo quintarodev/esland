@@ -1,0 +1,74 @@
+---
+import BentoItem from "./BentoItem.astro"
+---
+
+<section class="mx-auto px-20 grid areas gap-8 w-full">
+  <BentoItem
+    classname="[grid-area:cenit] cenit h-[350px]  relative"
+    title="ANDORRA: EL CÉNIT DE LOS PREMIOS ESLAND"
+  >
+    <div
+      slot="image"
+      class="transition-scale absolute bottom-0 left-0 top-0
+      -z-10 h-full w-full bg-blue-950
+      bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      style="background-image:url('/montain.png')"
+    >
+    </div>
+    <p slot="content">
+      Una nueva edición <strong>cargada de novedades</strong> y contenido, que
+      empezará varias semanas antes de la ansiada gala. <strong
+        >Directos especiales, colaboraciones, conciertos y mucho más</strong
+      > en lo que será una auténtica fiesta dedicada a la creación de contenido.
+    </p>
+  </BentoItem>
+  <BentoItem
+    classname="[grid-area:alfonbra]"
+    title="LA ALFOMBRA BLANCA"
+    subTitle="16 de febrero de 2024"
+  >
+    <p slot="content">
+      Este año, el momento de la alfombra azul será sustituido y mejorado,
+      gracias a los increíbles paisajes andorranos, por una alfombra blanca en
+      plena nieve, situada en las pistas de esquí de Andorra.
+    </p>
+  </BentoItem>
+  <BentoItem
+    title="LA GALA"
+    subTitle="17 de febrero de 2024"
+    classname="[grid-area:gala]"
+  >
+    <p slot="content">
+      Una gala de premios llena de contenido de primer nivel y muchas sorpresas,
+      en la que se descubrirán los ganadores de esta tercera edición de los
+      Premios ESLAND
+    </p>
+  </BentoItem>
+  <BentoItem
+    title="DISFRUTA DEL REDDIT DE LA COMUNIDAD"
+    classname="[grid-area:reddit]"
+  >
+    <p slot="content">
+      Este año, el reddit no formará parte de las votaciones de los premios,
+      pero sí que formará parte de la comunidad. El subreddit oficial de los
+      Premios ESLAND está abierto para ti, para que compartas tus clips, tus
+      opiniones y para que interactúes con toda la comunidad del streaming
+      hispanohablante.
+    </p>
+    <a href="/">ÚNETE</a>
+  </BentoItem>
+</section>
+<style>
+  .areas {
+    grid-template-areas:
+      "cenit cenit"
+      "alfonbra gala"
+      "reddit gala";
+  }
+  .cenit {
+    background-image: url("/montain.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>
